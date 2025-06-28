@@ -1,6 +1,7 @@
 import React from 'react'
 import reviews from '../data'
 import {FaQuoteLeft,FaQuoteRight,FaGem} from "react-icons/fa";
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 const Card = (props) => {
     let review=props.review;
   return (
@@ -12,24 +13,27 @@ const Card = (props) => {
         <div className='w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] z-[-10]'></div>
       </div>
      <div className='text-center mt-7'>
-       <p>{review.name}</p>
+       <p className='font-bold text-2xl capitlize'>{review.name}</p>
     </div>
-
-<div>
-    <p>{review.job}</p>
+<div  className='text-center mt-7'>
+    <p className='text-voilet-300 uppercase text-sm'>{review.job}</p>
  </div>
- <div>
+ <div className='text-voilet-400 mx-auto mt-5'>
     <FaQuoteLeft/>
  </div>
-<div>
+<div className='text-center mt-4 text-slate-500'>
     {review.text}
 </div>
-<div>
+<div className='text-voilet-400 mx-auto mt-5'>
     <FaQuoteRight/>
  </div>
  <div>
-    <button>+</button>
-    <button>*</button>
+    <button>
+        <FiChevronLeft/>
+    </button>
+    <button>
+  <FiChevronRight/>
+    </button>
  </div>
  <div>
     <button>Surprise Me</button>
